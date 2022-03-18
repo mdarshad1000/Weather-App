@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather</title>
+    <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='newtodo.ico') }}" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+
+</head>
+<body style="background-color:black">
+    <div style="margin-top: 50px" class="ui center container">
+
+        <h1 style="font-size:70px;font-family:Serif;color:black"  class="ui center aligned block header">
+        <img src="{{url_for('static', filename='weather.png')}}" class="ui circular image">
+        <div class="content">Weather
+            <div class="sub header" style="font-size:20px">Find out the weather of any place.<i class="angle double down icon"></i>
+</div>
+          </div></h1>
+            <form class="ui form" method="POST">
+                <div class="field">
+                <h3 class="ui center aligned block header"> Enter City </h3>
+                <input type="text" name="city" placeholder="City Name" required>
+                <br><br>
+                <button class="ui green button">Go</button>
+        </div>
+    </form>
+    <div class="ui segment">
+        <p class="ui big header">Temperature is {{ temperature }} °C</p>
+        <p class="ui big header">Humidity is {{ humidity }} %</p>
+        <p class="ui big header">Pressure is {{ pressure }} mb</p>
+        <p class="ui big header">Speed of wind is {{ wind }} km/h</p>
+
+    </div>
+    <footer class="footer">
+    </footer>
+    </div>
+<!-- FOOTER-->
+    <footer>
+    <div class="ui vertical footer segment">
+        <div class="ui center aligned container">
+                <div class="ui horizontal small divided link list">
+                    <span class="ui gray label">Connect with me</span><br><br>
+                        <a href="https://www.linkedin.com/in/mohammadarshad1000/" target=" "><button class="ui linkedin button">
+                          <i class="linkedin icon"></i>
+                          Linkedin
+                        </button></a>
+
+                        <a href="https://github.com/mdarshad1000" target=" "><button class="ui github button">
+                          <i class="github icon"></i>
+                          GitHub
+                        </button></a>
+
+                        <a href="https://www.instagram.com/_mohammadarshad/" target=" "><button class="ui instagram button">
+                          <i class="instagram icon"></i>
+                          Instagram
+                        </button></a>
+
+
+                </div>
+        </div>
+    </div>
+    </footer>
+</body>
+
+</html>
